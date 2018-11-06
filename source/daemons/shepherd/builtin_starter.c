@@ -1746,24 +1746,24 @@ int use_starter_method /* If this flag is set the shellpath contains the
       pc = err_str;
       sprintf(pc, "execvp(%s,", filename);
       pc += strlen(pc);
-      for (pstr = args; pstr && *pstr; pstr++)
-      {
+      /* for (pstr = args; pstr && *pstr; pstr++) */
+      /* { */
       
-         /* calculate rest length in string - 15 is just lazyness for blanks,
-          * "..." string, etc.
-          */
-         if (strlen(*pstr) < ((sizeof(err_str)  - (pc - err_str) - 15)))
-         {
-            sprintf(pc, " \"%s\"", *pstr);
-            pc += strlen(pc);
-         }
-         else
-         {
-            sprintf(pc, " ...");
-            pc += strlen(pc);
-            break;
-         }      
-      }
+      /*    /\* calculate rest length in string - 15 is just lazyness for blanks, */
+      /*     * "..." string, etc. */
+      /*     *\/ */
+      /*    if (strlen(*pstr) < ((sizeof(err_str)  - (pc - err_str) - 15))) */
+      /*    { */
+      /*       sprintf(pc, " \"%s\"", *pstr); */
+      /*       pc += strlen(pc); */
+      /*    } */
+      /*    else */
+      /*    { */
+      /*       sprintf(pc, " ..."); */
+      /*       pc += strlen(pc); */
+      /*       break; */
+      /*    }       */
+      /* } */
 
       sprintf(pc, ")");
       shepherd_trace(err_str);
