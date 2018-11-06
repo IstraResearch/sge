@@ -497,8 +497,9 @@ int sge_add_event_client(lListElem *clio, lList **alpp, lList **eclpp, char *rus
          ERROR((SGE_EVENT, MSG_EVE_CLIENTREREGISTERED_SSSU, name, host, 
                 commproc, sge_u32c(commproc_id)));
 
+         int ec_id = lGetUlong(event_client, EV_id);
          /* delete old event client entry, and we already hold the lock! */
-         remove_event_client(&ep, id, false);
+         remove_event_client(&ep, ec_id, false);
       }
 
       /* Otherwise, get a new dynamic event client id */
