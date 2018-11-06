@@ -293,8 +293,10 @@ int sge_reap_children_execd(int max_count, bool is_qmaster_down)
          lSetUlong(jr, JR_state, JEXITING);
 
          if(petep != NULL) {
+            lSetUlong(petep, PET_pid, 0);
             lSetUlong(petep, PET_status, JEXITING);
          } else {
+            lSetUlong(jatep, JAT_pid, 0);
             lSetUlong(jatep, JAT_status, JEXITING);
          }
 
