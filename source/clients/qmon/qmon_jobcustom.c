@@ -130,7 +130,7 @@ static int is_job_runnable_on_queues(lListElem *jep, lList *queue_list, lList *e
 static htable JobColumnPrintHashTable = NULL;
 static htable NameMappingHashTable = NULL;
 
-#define FIRST_FIELD     6
+#define FIRST_FIELD     8
 
 static tJobField job_items[] = {
    { 1, JB_job_number, "@{Id}", 12, 20, PrintJobTaskId }, 
@@ -140,8 +140,8 @@ static tJobField job_items[] = {
    { 1, JB_owner, "@{Owner}", 10, 50, PrintString },
    { 1, JAT_status, "@{Status}", 7, 30, PrintStatus },
    { 1, 0, "@{Queue}", 16, 500, PrintGrantedQueue},
-   { 0, JB_submission_time, "@{SubmitTime}", 19, 30, PrintTime },
-   { 0, JAT_start_time, "@{StartTime}", 19, 30, PrintStartTime },
+   { 1, JB_submission_time, "@{SubmitTime}", 19, 30, PrintTime },
+   { 1, JAT_start_time, "@{StartTime}", 19, 30, PrintStartTime },
    { 0, JB_execution_time, "@{ScheduleTime}", 19, 30, PrintTime },
    { 0, JB_account, "@{AccountString}", 15, 50, PrintString },
 #if 0 /* JG: removed JB_cell from job object */   

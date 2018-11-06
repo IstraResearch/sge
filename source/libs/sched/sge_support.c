@@ -919,20 +919,39 @@ void sgeee_sort_jobs_by( lList **job_list , int by_SGEJ_field, int field_sort_di
    /*-----------------------------------------------------------------
     * Sort tmp list
     *-----------------------------------------------------------------*/
-   if ((field_sort_direction) && (jobnum_sort_direction)) {
-      sortorder = "%I+ %I+ %I+";
-   } else if (!field_sort_direction) {
-      sortorder = "%I- %I+ %I+";
-   } else if (!jobnum_sort_direction) {
-      sortorder = "%I+ %I- %I-";
-   } else {
-      sortorder = "%I- %I- %I-";
-   }
+   
 
-   lPSortList(tmp_list, sortorder,
-	      by_SGEJ_field,
-	      SGEJ_submission_time,
-	      SGEJ_job_number);
+   if (by_SGEJ_field == SGEJ_submission_time) {
+     if ((field_sort_direction) && (jobnum_sort_direction)) {
+       sortorder = "%I+ %I+";
+     } else if (!field_sort_direction) {
+       sortorder = "%I- %I+";
+     } else if (!jobnum_sort_direction) {
+       sortorder = "%I+ %I-";
+     } else {
+       sortorder = "%I- %I-";
+     }
+     
+     lPSortList(tmp_list, sortorder,
+                by_SGEJ_field,
+                SGEJ_job_number);
+   }
+   else {
+     if ((field_sort_direction) && (jobnum_sort_direction)) {
+       sortorder = "%I+ %I+ %I+";
+     } else if (!field_sort_direction) {
+       sortorder = "%I- %I+ %I+";
+     } else if (!jobnum_sort_direction) {
+       sortorder = "%I+ %I- %I-";
+     } else {
+       sortorder = "%I- %I- %I-";
+     }
+     
+     lPSortList(tmp_list, sortorder,
+                by_SGEJ_field,
+                SGEJ_submission_time,
+                SGEJ_job_number);
+   }
 
    /*-----------------------------------------------------------------
     * rebuild job_list according sort order

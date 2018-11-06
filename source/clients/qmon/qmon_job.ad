@@ -148,10 +148,10 @@ Qmon*job_running_jobs.fill:                 False
 Qmon*job_running_jobs.reverseSelect:        True
 Qmon*job_running_jobs.fontList:             $matrix_font
 !!Qmon*job_running_jobs.fixedColumns:     5
-Qmon*job_running_jobs.columns:          6
-Qmon*job_running_jobs.columnMaxLengths: 40,20,50,50,30,500
-Qmon*job_running_jobs.rows:             20
-Qmon*job_running_jobs.visibleRows:      17
+Qmon*job_running_jobs.columns:          8
+Qmon*job_running_jobs.columnMaxLengths: 40,20,50,50,30,500,30,30
+Qmon*job_running_jobs.rows:             30
+Qmon*job_running_jobs.visibleRows:      27
 Qmon*job_running_jobs.evenRowBackground: $matrix_even_bg
 Qmon*job_running_jobs.oddRowBackground:  $matrix_odd_bg
 !! Qmon*job_running_jobs.gridType:            GRID_CELL_SHADOW
@@ -162,7 +162,7 @@ Qmon*job_running_jobs.gridType:            GRID_NONE
 Qmon*job_running_jobs.boldLabels:             True
 Qmon*job_running_jobs.buttonLabels:           True
 Qmon*job_running_jobs.columnLabelColor:       $matrix_label
-Qmon*job_running_jobs.columnLabels:           @{JobId}, @{Priority}, @{JobName}, @{Owner}, @{Status}, @{Queue}
+Qmon*job_running_jobs.columnLabels:           @{JobId}, @{Priority}, @{JobName}, @{Owner}, @{Status}, @{Queue}, @{SubmitTime}, @{StartTime}
 
 Qmon*job_running_jobs*horizontalScrollBarDisplayPolicy: DISPLAY_STATIC
 
@@ -189,10 +189,10 @@ Qmon*job_pending_jobs.fill:                 False
 Qmon*job_pending_jobs.reverseSelect:        True
 Qmon*job_pending_jobs.fontList:             $matrix_font
 !!Qmon*job_pending_jobs.fixedColumns:         5
-Qmon*job_pending_jobs.columns:              6
-Qmon*job_pending_jobs.columnMaxLengths: 40,20,50,50,30,500
-Qmon*job_pending_jobs.rows:        20
-Qmon*job_pending_jobs.visibleRows: 17
+Qmon*job_pending_jobs.columns:              8
+Qmon*job_pending_jobs.columnMaxLengths: 40,20,50,50,30,500,30,30
+Qmon*job_pending_jobs.rows:        30
+Qmon*job_pending_jobs.visibleRows: 27
 Qmon*job_pending_jobs.evenRowBackground: $matrix_even_bg
 Qmon*job_pending_jobs.oddRowBackground:  $matrix_odd_bg
 !! Qmon*job_pending_jobs.gridType:      GRID_CELL_SHADOW
@@ -200,7 +200,7 @@ Qmon*job_pending_jobs.oddRowBackground:  $matrix_odd_bg
 !! Qmon*job_pending_jobs.cellShadowThickness: 1
 Qmon*job_pending_jobs.gridType:      GRID_NONE
 
-Qmon*job_pending_jobs.columnLabels:           @{JobId}, @{Priority}, @{JobName}, @{Owner}, @{Status}, @{Queue}
+Qmon*job_pending_jobs.columnLabels:           @{JobId}, @{Priority}, @{JobName}, @{Owner}, @{Status}, @{Queue}, @{SubmitTime}, @{StartTime}
 Qmon*job_pending_jobs.boldLabels: True
 Qmon*job_pending_jobs.buttonLabels:        True
 Qmon*job_pending_jobs.columnLabelColor:    $matrix_label
@@ -230,10 +230,10 @@ Qmon*job_zombie_jobs.fill:                 False
 Qmon*job_zombie_jobs.reverseSelect:        True
 Qmon*job_zombie_jobs.fontList:             $matrix_font
 !!Qmon*job_zombie_jobs.fixedColumns:         5
-Qmon*job_zombie_jobs.columns:              6
-Qmon*job_zombie_jobs.columnMaxLengths: 40,20,50,50,30,500
-Qmon*job_zombie_jobs.rows:        20
-Qmon*job_zombie_jobs.visibleRows: 17
+Qmon*job_zombie_jobs.columns:              8
+Qmon*job_zombie_jobs.columnMaxLengths: 40,20,50,50,30,500,30,30
+Qmon*job_zombie_jobs.rows:        30
+Qmon*job_zombie_jobs.visibleRows: 27
 Qmon*job_zombie_jobs.evenRowBackground: $matrix_even_bg
 Qmon*job_zombie_jobs.oddRowBackground:  $matrix_odd_bg
 !! Qmon*job_zombie_jobs.gridType:      GRID_CELL_SHADOW
@@ -241,7 +241,7 @@ Qmon*job_zombie_jobs.oddRowBackground:  $matrix_odd_bg
 !! Qmon*job_zombie_jobs.cellShadowThickness: 1
 Qmon*job_zombie_jobs.gridType:      GRID_NONE
 
-Qmon*job_zombie_jobs.columnLabels:           @{JobId}, @{Priority}, @{JobName}, @{Owner}, @{Status}, @{Queue}
+Qmon*job_zombie_jobs.columnLabels:           @{JobId}, @{Priority}, @{JobName}, @{Owner}, @{Status}, @{Queue}, @{SubmitTime}, @{StartTime}
 Qmon*job_zombie_jobs.boldLabels: True
 Qmon*job_zombie_jobs.buttonLabels:        True
 Qmon*job_zombie_jobs.columnLabelColor:    $matrix_label

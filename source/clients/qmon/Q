@@ -61,7 +61,7 @@ Qmon*automaticUpdateHostTab: TRUE
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! job configuration settings
 !! Qmon*job_form*columnWidths: nr of characters per column for 
-!!                                the first 6 cols
+!!                                the first 8 cols
 !! Qmon*job_form*visibleColumns: nr of visible columns (without scrollbar)
 !!                               if the column sizes shall be bigger this can
 !!                               be lowered to show only the first n cols and
@@ -69,8 +69,8 @@ Qmon*automaticUpdateHostTab: TRUE
 !!                               scrollbar
 !!                               
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Qmon*job_form*columnWidths:      12,8,10,10,7,16
-Qmon*job_form*visibleColumns:    6
+Qmon*job_form*columnWidths:      12,8,10,10,7,16,19,19
+Qmon*job_form*visibleColumns:    8
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! AR configuration settings

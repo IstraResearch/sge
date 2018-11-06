@@ -557,7 +557,7 @@ XtPointer cad
    XbaeMatrixLabelActivateCallbackStruct *cbs = 
             (XbaeMatrixLabelActivateCallbackStruct *) cad;
    /* SGEJ_state is not a typo - PrintStatus uses both JAT_status and JAT_state */
-   int column_nm[] = {SGEJ_job_number, SGEJ_priority, SGEJ_job_name, SGEJ_owner, SGEJ_state, SGEJ_master_queue};
+   int column_nm[] = {SGEJ_job_number, SGEJ_priority, SGEJ_job_name, SGEJ_owner, SGEJ_state, SGEJ_master_queue, SGEJ_submission_time};
    /* 
    ** Mapping the columns to these internal resources:
    ** JB_job_number    (Ulong)
@@ -572,7 +572,7 @@ XtPointer cad
    DPRINTF(("JobSort = cbs->column = %d\n", cbs->column));
    
    /* not coping beyond 6th column */
-   if ( cbs->column > 5) {
+   if ( cbs->column > 6) {
       DEXIT;
       return;
    }
@@ -941,17 +941,17 @@ void updateJobList(void)
 
    /* shrinking excessive vertical size of tabs from previous runs of updateJobList() */  
    current_rows = XbaeMatrixNumRows(job_running_jobs);
-   desired_rows = MAX(row, 20);
+   desired_rows = MAX(row, 30);
    if (current_rows > desired_rows) {
      XbaeMatrixDeleteRows(job_running_jobs, desired_rows, current_rows - desired_rows);
    }   
    current_rows = XbaeMatrixNumRows(job_pending_jobs);
-   desired_rows = MAX(pow, 20);
+   desired_rows = MAX(pow, 30);
    if (current_rows > desired_rows) {
      XbaeMatrixDeleteRows(job_pending_jobs, desired_rows, current_rows - desired_rows);
    }
    current_rows = XbaeMatrixNumRows(job_zombie_jobs);
-   desired_rows = MAX(zow, 20);
+   desired_rows = MAX(zow, 30);
    if (current_rows > desired_rows) {
      XbaeMatrixDeleteRows(job_zombie_jobs, desired_rows, current_rows - desired_rows);
    }
