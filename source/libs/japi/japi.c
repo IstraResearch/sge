@@ -952,12 +952,13 @@ int japi_exit(int flag, dstring *diag)
       /* If the event client thread is still starting up, we can shotcut its
        * start-up by setting the state to JAPI_EC_FINISHING without having to
        * first let it come up and then bring it down. */   
-      japi_ec_state = JAPI_EC_FINISHING;
-      JAPI_UNLOCK_EC_STATE();
 
       if (my_state == JAPI_EC_UP) {
          japi_stop_event_client(default_cell);
       }
+      
+      japi_ec_state = JAPI_EC_FINISHING;
+      JAPI_UNLOCK_EC_STATE();
 
       DPRINTF (("Waiting for event client to terminate.\n"));
       pthread_join (japi_event_client_thread, NULL);
