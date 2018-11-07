@@ -69,7 +69,7 @@ Qmon*automaticUpdateHostTab: TRUE
 !!                               scrollbar
 !!                               
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Qmon*job_form*columnWidths:      12,8,10,10,7,16,19,19
+Qmon*job_form*columnWidths:      12,8,15,10,7,16,19,19
 Qmon*job_form*visibleColumns:    8
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

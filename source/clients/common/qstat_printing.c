@@ -471,7 +471,7 @@ lList **alpp
          if (!(full_listing & QSTAT_DISPLAY_FULL)) {
             int line_length = queue_name_length-10+1;
             char * seperator = malloc(line_length);		   
-            const char *part1 = "%s%-7.7s %s %s%s%s%s%s %-10.10s %-12.12s %s%-5.5s %s%s%s%s%s%s%s%s%s%-";
+            const char *part1 = "%s%-7.7s %s %s%s%s%s%s %-15.15s %-12.12s %s%-5.5s %s%s%s%s%s%s%s%s%s%-";
             const char *part3 = ".";
             const char *part5 = "s %s %s%s%s%s%s%s";
             char *part6 = malloc(strlen(part1) + strlen(part3) + strlen(part5) + 20);
@@ -622,9 +622,10 @@ lList **alpp
          DRETURN(ret);
       }
    } else {
+     
       if (print_jobid) {
          /* job name */
-         printf("%-10.10s ", lGetString(job, JB_job_name)); 
+         printf("%-15.15s ", lGetString(job, JB_job_name)); 
 
          /* job owner */
          printf("%-12.12s ", lGetString(job, JB_owner)); 

@@ -859,7 +859,7 @@ static int job_stdout_job(job_handler_t* handler, u_long32 jid, job_summary_t *s
       int i;
       int line_length = qstat_env->longest_queue_length-10+1;
       char * seperator = malloc(line_length);		   
-      const char *part1 = "%s%-7.7s %s %s%s%s%s%s %-10.10s %-12.12s %s%-5.5s %s%s%s%s%s%s%s%s%s%-";
+      const char *part1 = "%s%-7.7s %s %s%s%s%s%s %-15.15s %-12.12s %s%-5.5s %s%s%s%s%s%s%s%s%s%-";
       const char *part3 = ".";
 	   const char *part5 = "s %s %s%s%s%s%s%s";
 		char *part6 = malloc(strlen(part1) + strlen(part3) + strlen(part5) + 20);
@@ -979,7 +979,7 @@ static int job_stdout_job(job_handler_t* handler, u_long32 jid, job_summary_t *s
 
    if (print_job_id) {
       /* job name */
-      printf("%-10.10s ", summary->name); 
+      printf("%-15.15s ", summary->name); 
 
       /* job owner */
       printf("%-12.12s ", summary->user); 
