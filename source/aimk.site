@@ -77,7 +77,7 @@ setenv TMPDIR /tmp
 # is installed
 #
 set OPENSSL_SOVERSION = 0.9.8h
-set OPENSSL_HOME = /build/openssl-install
+set OPENSSL_HOME = /usr/lib/ssl
 
 # 
 # BERKELEYDB_HOME the directory where the include and lib directory of
